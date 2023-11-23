@@ -26,14 +26,23 @@ jobs:
 #       run: npm run build
 
       # Step 2: Deploy the site to Netlify
-      - name: Deploy Site to Netlify
-        uses: nwtgck/actions-netlify@v1.2
+      - name: Deploy to Netlify
+        uses: jsmrcaga/action-netlify-deploy@v2.1.0
         with:
-          publish-dir: './'
-          production-branch: main
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Deploy from GitHub Actions"
-          production-deploy: true
-        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_DEPLOY_MESSAGE: "Deployed from GitHub action"
+          NETLIFY_DEPLOY_TO_PROD: true
+          install_command: "echo Skipping installing the dependencies"
+          build_command: "echo Skipping building the web files"
+#      - name: Deploy Site to Netlify
+#        uses: nwtgck/actions-netlify@v1.2
+#        with:
+#          publish-dir: './'
+#          production-branch: main
+#          github-token: ${{ secrets.GITHUB_TOKEN }}
+#          deploy-message: "Deploy from GitHub Actions"
+#          production-deploy: true
+#        env:
+#          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+#          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
