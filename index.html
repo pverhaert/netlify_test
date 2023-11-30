@@ -74,15 +74,31 @@
             width: 100px;
             height: auto;
             position: absolute;
-            bottom: 1rem;
+            bottom: 0;
             left: 1rem;
             filter: grayscale(30%);
-            opacity: .8;
+            opacity: .3;
+            animation: move 20s infinite;
         }
 
         aside img {
             width: 100%;
             height: auto;
+        }
+
+        @keyframes move {
+            0% {
+                bottom: -60px;
+                opacity: .3;
+            }
+            10%, 10.5% {
+                bottom: 0;
+                opacity: 1;
+            }
+            10.5%, 100% {
+                bottom: -60px;
+                opacity: .3;
+            }
         }
     </style>
 </head>
@@ -91,12 +107,13 @@
     <h1>[Naam]</h1>
     <nav>
         <ul>
-            <li><a href="portfolio/index.html">Portfolio</a></li>
-            <li><a href="flyer/index.html">Flyer</a></li>
+            <li><a href="portfolio/index.html" target="subsite">Portfolio</a></li>
+            <li><a href="flyer/index.html" target="subsite">Flyer</a></li>
         </ul>
     </nav>
 </main>
 <aside>
+    <!-- Frog from https://rawsvg.com/svg/frog-svg-mpwl1oundjop2ojn.html -->
     <img src="portfolio/assets/frog.svg" alt="frog">
 </aside>
 </body>
