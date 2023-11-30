@@ -4,8 +4,15 @@
   "description": "Portfolio 1WT 2023 - 2024",
   "main": "index.js",
   "scripts": {
-    "watch": "live-server --port=5555"
+    "watch": "live-server --port=5555",
+    "delete_dist": "rimraf ./dist",
+    "copy": "copyfiles -e \"./node_modules/**\" ./**/*.{html,js,css,png,webp,jpg,jpeg,gif} ./dist",
+    "build": "npm run delete_dist && npm run copy"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "rimraf": "^5.0.5"
+  }
 }

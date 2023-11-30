@@ -2,19 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio 1WT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            height: 100vh;
+            background: linear-gradient(180deg, #dcd27f 0%, #bca940 100%);
+        }
+
+        body {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            line-height: 1.5;        }
+
+        main {
+            width: 400px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+        nav {
+            margin-top: 2rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style-type: none;
+        }
+
+        nav li {
+            flex: 1 1 auto;
+            display: flex;
+            background-color: #0e7490;
+            padding: .5rem 1rem;
+            border-radius: .25rem;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+            transition: .3s;
+        }
+
+        nav li:hover {
+            background-color: #155e75;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+        }
+
+        nav a {
+            flex: 1 1 auto;
+            text-decoration: none;
+            color: #d3fafb;
+        }
+    </style>
 </head>
 <body>
-<h1>Heading 1.x</h1>
-<p><a href="p2/index.html">Pagina 2</a></p>
-<p><img src="assets/OIP.jpg" alt=""></p>
-<script src="assets/js/test.js"></script>
-<hr>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem eius laudantium molestias nobis optio pariatur,
-    porro quod veniam voluptatem. Consectetur cupiditate debitis ipsam quae quaerat quasi rem sapiente soluta.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quos reiciendis repellat? Aliquid atque, distinctio
-    eaque fugit impedit inventore libero natus praesentium quidem reiciendis saepe sapiente sit temporibus tenetur
-    voluptas!</p>
+<main>
+    <h1>[Naam]</h1>
+    <nav>
+        <ul>
+            <li><a href="portfolio/index.html">Portfolio</a></li>
+            <li><a href="flyer/index.html">Flyer</a></li>
+        </ul>
+    </nav>
+</main>
 </body>
 </html>
